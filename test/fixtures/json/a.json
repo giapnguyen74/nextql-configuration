@@ -1,0 +1,10 @@
+{
+	"name": "a",
+	"models": {
+		"model1": {
+			"fields": {
+				"a": 1
+			}
+		}
+	}
+}
