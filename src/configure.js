@@ -89,13 +89,15 @@ function consume_modules(modules) {
 }
 
 function load_modules(nextql) {
+	nextql.$configuration.modules = {};
+
 	return Promise.all(
 		nextql.$configuration.sources.map(options =>
 			load_modules_from_source(nextql, options)
 		)
 	).then(() => {
 		const models = consume_modules(nextql.$configuration.modules);
-
+		nextql.models = {};
 		Object.keys(models).forEach(k => nextql.model(k, models[k]));
 	});
 }
@@ -116,8 +118,7 @@ function configure(conf) {
 
 function reload() {
 	const nextql = this;
-	nextql.$configuration.modules = {};
-	nextql.models = {};
+
 	return load_modules(nextql);
 }
 
