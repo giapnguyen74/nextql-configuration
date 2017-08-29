@@ -1,6 +1,9 @@
 # nextql-configuration
 NextQL plugin for complex model modular and distribution.
 
+## NextQL 
+[NextQL](https://github.com/giapnguyen74/nextql) is JSON query language for APIs and a robust and extensible runtime for resolve those queries. Equivalent with [Facebook's GraphQL](http://graphql.org/), but much more simple.
+
 # Why?
 In real life applications, number of models (or types) could be numerous. For example Github's GraphQL API have more than 150 types. ERP system like Odoo could have thousands models. NextQL-Configuration is a pattern to organize models into different modules and sources.
 
